@@ -58,7 +58,6 @@ int main()
 }
 //-----------------------------------------------------------------------------------------------------------------------
 
-
 void board()
 {
 	std::cout << "-----------------" << std::endl;
@@ -92,6 +91,7 @@ void choosePlayer(char& player1, char& player2)
 		}
 	}
 }
+
 void player1Turn()
 {
 	std::cout << "Player " << player1 << " move (x, y coordinate):" << std::endl;
@@ -127,28 +127,20 @@ int checkwin()
 {
 	if (table[0][0] != 32 && table[0][0] == table[0][1] && table[0][0] == table[0][2])
 		return 1;
-
 	else if (table[1][0] != 32 && table[1][0] == table[1][1] && table[1][0] == table[1][2])
 		return 1;
-
 	else if (table[2][0] != 32 && table[2][0] == table[2][1] && table[2][0] == table[2][2])
 		return 1;
-
 	else if (table[0][0] != 32 && table[0][0] == table[1][0] && table[0][0] == table[2][0])
 		return 1;
-
 	else if (table[0][1] != 32 && table[0][1] == table[2][1] && table[0][1] == table[3][1])
 		return 1;
-
 	else if (table[0][2] != 32 && table[0][2] == table[1][2] && table[0][2] == table[2][2])
 		return 1;
-
 	else if (table[0][0] != 32 && table[0][0] == table[1][1] && table[0][0] == table[2][2])
 		return 1;
-
 	else if (table[0][2] != 32 && table[0][2] == table[1][1] && table[0][2] == table[2][0])
 		return 1;
-
 	else
 		return 0;
 }
